@@ -6,8 +6,7 @@ import { AuthType } from './types';
 const Auth = () => {
   // create a state to toogle between login and register
   const [authType, setAuthType] = useState<AuthType>(AuthType.Login);
-  console.log(authType);
-  if (authType === AuthType.Login) return <Login />;
+  if (authType === AuthType.Login) return <Login setAuthType={setAuthType} />;
   return <Register setAuthType={setAuthType} />;
 };
 
